@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #000000 15%, #000155, #000000);
+  color: #fff;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Header fixo */
+header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+
+header nav ul li img {
+    transform: scale(0.4);
+}
+.logo-inity img {
+  position: relative;
+  margin-top: 8px;
+  height: 90px;
+  filter: drop-shadow(1px 1px 20px #770000);
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: "Orbitron", sans-serif;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+  color: #ff0000;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #ff0000;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.ativo::after {
+  width: 100%;
+}
+
+/* Seção Sobre */
+.sobre {
+  margin-top: 150px;
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.sobre h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.sobre h1 span {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+.sobre p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.sobre p span {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 15px rgba(255,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255,0,0,0.6);
+}
+
+.card h2 {
+  font-family: Orbitron, sans-serif;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+footer {
+  margin-top: 200px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  font-size: 14px;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  background: transparent;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

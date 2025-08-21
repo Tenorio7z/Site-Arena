@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000000 15%, #14004d, #000000);
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    backdrop-filter: blur(5px);
+}
+
+header .logo-inity img {
+    position: fixed;
+    top: 10px;
+    /* distância do topo */
+    left: 15px;
+    /* distância da esquerda */
+    width: 500px;
+    /* tamanho da logo */
+    z-index: 1000;
+    /* garante que fique acima de tudo */
+    filter: drop-shadow(0 0 10px #7700ff);
+}
+
+main {
+    margin-top: 220px;
+    padding: 20px;
+    align-items: center;
+    margin-left: 620px;
+    
+}
+
+.birthday-info {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 0, 200, 0.2);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.birthday-info h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-shadow: 0 0 15px #ff0099, 0 0 25px #7700ff;
+}
+
+.birthday-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    text-align: left;
+}
+
+.benefits li {
+    font-size: 17px;
+    margin: 12px 0;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #ffcc00;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.benefits li:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.15);
+    border-left-color: #ff7700;
+}
+
+.reserve-btn {
+    background: linear-gradient(90deg, #ffcc00, #ff7700);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #ff7700, 0 0 30px #ffcc00;
+}
+
+.reserve-btn:hover {
+    background: linear-gradient(90deg, #ff7700, #ff3300);
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #ff3300, 0 0 40px #ff7700;
+}
+
+/* animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
